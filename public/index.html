@@ -8,13 +8,18 @@
             var illumative = illumativeController();
             illumative.setAllBlack();
             
-            //set all uneven lights to red with a small delay
-            for(var i = 0; i < 24; i+=2){
-                setTimeout(function(j){
-                    console.log(j);
-                    illumative.setLight(j,255)
-                }, i*50, i);
-            }
+            //loop through all lights and set to red one by one
+            (function looper(){
+                
+                var i = 0;
+                setInterval(function(){
+                    illumative.setAllBlack();
+                    illumative.setLight(i, 255);
+                    i++ 
+                    if(i == 24)i = 0;
+                },100)
+                
+            })()
             
         </script>
     
