@@ -16,5 +16,6 @@ setTimeout(illumative.controller.setAllBlack, 600);
 //set single light to RGBW 
 //illumative.controller.setLight(0, [255,0,0,1]);
 
+//starts webinterface on port 3000
 var webInterface = illumative.web(illumative.controller, 3000);
 webInterface.start();
