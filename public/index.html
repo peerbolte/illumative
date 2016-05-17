@@ -4,13 +4,23 @@
         <script src="illumative.js"></script>
         <script>
             
-            //use http://localhost:3000 if running locally 
-            var illumative = illumativeController('http://192.168.1.110:3000');
+          
+            var illumative = illumativeController();
             illumative.setAllBlack();
-            illumative.setLight(11,255,0,0,1);
+            
+            //set all uneven lights to red with a small delay
+            for(var i = 0; i < 24; i+=2){
+                setTimeout(function(j){
+                    console.log(j);
+                    illumative.setLight(j,255)
+                }, i*50, i);
+            }
             
         </script>
     
     </head>
-    
+    <body>
+        <h1>Illumative</h1>
+        check the source!
+    </body>
 </html>
