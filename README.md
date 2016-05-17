@@ -39,7 +39,7 @@ You can try to controll the lights by visiting some urls:
 - `http://localhost:3000/api/setlight?light=10&r=255&g=128&b=0&w=0` will turn the 11th light orange
 
 You can also programatically control the lights in javascript in the front-end. The files in `/public` will be served at `http://localhost:3000` by default. 
-After loading `illumative.js` in the front-end `var illumative = illumativeController` can be used to create a front-end illumative controller.
+After loading `illumative.js` in the front-end `var illumative = illumativeController()` can be used to create a front-end illumative controller.
 Accepted methods:
 - `illumative.setAllWhite()`
 - `illumative.setAllBlack()`
