@@ -33,7 +33,7 @@ Run `npm start` or `node index` to try again.
 ##Controlling the lights
 
 After the installation you can start programming directly in node `index.js` or use the webinterface which is running at `http://localhost:3000` by default. 
-You can try to controll the lights by visiting some urls:
+You can try to controll the lights by visiting these urls:
 - `http://localhost:3000/api/setAllWhite` will turn all lights white
 - `http://localhost:3000/api/setAllBlack` will turn all lights black
 - `http://localhost:3000/api/setlight?light=10&r=255&g=128&b=0&w=0` will turn the 11th light orange
@@ -44,5 +44,7 @@ Accepted methods:
 - `illumative.setAllWhite()`
 - `illumative.setAllBlack()`
 - `illumative.setLight(num, r, g, b, w)`
+
+The LEDs can be given a colour by mixing RED, GREEN, BLUE and WHITE (rgbw). Each colourchannel accepts a value between 0 and 255. 
 
 A simple demonstration can be found in `public/index.html` which can be visited at `http://localhost:3000`
